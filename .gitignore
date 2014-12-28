@@ -1,0 +1,15 @@
+slprj
+docs
+screens
+results
+/**/deprecated
+--*.*
+--*
+
+*.suo*
+*.user*
+*.gpState*
+*.DotSettings*
+-xternals/**/bin
+-xternals/**/obj
+-xternals/**/CsvHelper

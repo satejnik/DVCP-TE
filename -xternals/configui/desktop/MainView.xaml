@@ -1,0 +1,159 @@
+﻿<!--Copyright © 2014 Alexander Isakov. Contact:<alexander.isakov@tuhh.de>
+    Copyright © 2014 Marina Krotofil. Contact:<marina.krotofil@tuhh.de>
+    Copyright © 2014 TUHH-SVA Security in Distributed Applications.
+    All rights reserved.
+    License: http://opensource.org/licenses/BSD-3-Clause
+-->
+    
+<Window x:Class="configui.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        xmlns:configui ="clr-namespace:configui"
+        xmlns:model="clr-namespace:shared.Model;assembly=shared"
+        Title="Configui" Height="600" Width="800"
+        MinWidth="550" MinHeight="300"
+        d:Height="320" d:Width="400"
+        Topmost="False"
+        FontFamily="Calibri light"
+        Foreground="#EFEFEF"
+        Background="#444444" IsEnabled="True">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/shared;component/Themes/Styles.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/shared;component/Assets/Templates.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/shared;component/Assets/TimePicker.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.CommandBindings>
+        <CommandBinding Command="configui:Commands.Reset" CanExecute="CanExecute" Executed="ResetButton_OnClick" />
+        <CommandBinding Command="configui:Commands.Set" CanExecute="CanExecute" Executed="SetButton_OnClick" />
+        <CommandBinding Command="configui:Commands.SaveAs" CanExecute="CanExecute" Executed="SaveButton_OnClick" />
+        <CommandBinding Command="configui:Commands.Run" CanExecute="CanExecute" Executed="RunButton_OnClick" />
+        <CommandBinding Command="configui:Commands.Default" Executed="DefaultButton_OnClick" />
+        <CommandBinding Command="configui:Commands.Exit" Executed="ExitButton_OnClick" />
+    </Window.CommandBindings>
+
+    <Grid>
+
+        <Grid.Resources>
+            <model:UIModel x:Key="DesignModel"/>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Menu>
+                <MenuItem Header="File">
+                    <MenuItem Header="Default" Command="configui:Commands.Default"/>
+                    <Separator/>
+                    <MenuItem Header="Reset" Command="configui:Commands.Reset"/>
+                    <MenuItem Header="Set" Command="configui:Commands.Set"/>
+                    <MenuItem Header="Save As" Command="configui:Commands.SaveAs"/>
+                    <MenuItem Header="Run" Command="configui:Commands.Run"/>
+                    <Separator/>
+                    <MenuItem Header="Exit" Command="configui:Commands.Exit"/>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+
+        <TabControl Grid.Row="1"
+                    TabStripPlacement="Top"
+                    Margin="5">
+
+            <TabItem Header="Xmeas">
+                <ScrollViewer>
+                    <ItemsControl ItemsSource="{Binding Xmeas}"
+                              d:DataContext="{Binding Source={StaticResource DesignModel}}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel ItemWidth="280" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="Xmv">
+                <ScrollViewer>
+                    <ItemsControl ItemsSource="{Binding Xmv}"
+                              d:DataContext="{Binding Source={StaticResource DesignModel}}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel ItemWidth="280" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </ScrollViewer>
+            </TabItem>
+
+        </TabControl>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0"
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Left">
+
+                <Button Content="_Exit"
+                        Margin="5, 0, 0, 10"
+                        Padding="5"
+                        Width="80"
+                        Command="configui:Commands.Exit"/>
+
+                <Button Content="_Default"
+                        Margin="5, 0, 0, 10"
+                        Padding="5"
+                        Width="80"
+                        Command="configui:Commands.Default"/>
+
+            </StackPanel>
+
+            <StackPanel Grid.Column="1"
+                        Orientation="Horizontal" 
+                        HorizontalAlignment="Right">
+
+                <Button Content="_Reset"
+                        Margin="0, 0, 5, 10"
+                        Padding="5"
+                        Width="80"
+                        Command="configui:Commands.Reset"/>
+
+                <Button Content="Se_t"
+                        Margin="0, 0, 5, 10"
+                        Padding="5"
+                        Width="80"
+                        Command="configui:Commands.Set"/>
+
+                <Button Content="_Save As" 
+                        Margin="0, 0, 5, 10"
+                        Padding="5"
+                        Width="80"
+                        Command="configui:Commands.SaveAs"/>
+
+                <Button Content="Ru_n"
+                        Margin="0, 0, 5, 10"
+                        Padding="5"
+                        Width="80"
+                        Command="configui:Commands.Run"/>
+
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+    
+</Window>
