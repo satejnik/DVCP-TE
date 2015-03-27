@@ -1,4 +1,4 @@
-![Damn Vulnerable Chemical Process](https://github.com/satejnik/DVCP-TE/blob/master/ccode/debug.h "Damn Vulnerable Chemical Process")
+![Damn Vulnerable Chemical Process](https://github.com/satejnik/DVCP-TE/blob/master/img/collage.png "Damn Vulnerable Chemical Process")
 
 DVCP-TE
 =======
