@@ -1,19 +1,13 @@
-function maximize(hFig)
-%MAXIMIZE Maximize a figure window to fill the entire screen.
-% 	Maximizes the current or input figure so that it fills the whole of the
-% 	screen that the figure is currently on. This function is platform
-% 	independent.
-%
-% 	Examples:
-%   	maximize
-%   	maximize(h)
-%
-%	Copyright © 2014 Alexander Isakov. Contact: <alexander.isakov@tuhh.de>
-%	Copyright © 2014 Marina Krotofil. Contact: <marina.krotofil@tuhh.de>
-%	Copyright © 2014 TUHH-SVA Security in Distributed Applications.
+%	Copyright © 2015 Alexander Isakov. Contact: <alexander.isakov@tuhh.de>
+%	Copyright © 2015 Marina Krotofil. Contact: <marina.krotofil@tuhh.de>
+%	Copyright © 2015 TUHH-SVA Security in Distributed Applications.
 %	All rights reserved.
 %	License: http://opensource.org/licenses/BSD-3-Clause
 %	----------------------------------------------------------------------
+function maximize(hFig)
+% 	Examples:
+%   	maximize -> max. current window
+%   	maximize(h) -> window handler
 
     if nargin < 1
         hFig = gcf;
