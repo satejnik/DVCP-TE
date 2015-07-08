@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [0.0, 0.0, 640.0, 770.0]
+      Location		      [129.0, 59.0, 640.0, 770.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -55,9 +55,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "lexx"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Dec 28 07:39:08 2014"
-  RTWModifiedTimeStamp	  341653055
-  ModelVersionFormat	  "1.%<AutoIncrement:118>"
+  LastModifiedDate	  "Wed Jul 08 14:36:23 2015"
+  RTWModifiedTimeStamp	  358266970
+  ModelVersionFormat	  "1.%<AutoIncrement:119>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -971,7 +971,7 @@ Library {
   }
   System {
     Name		    "TElib"
-    Location		    [0, 0, 640, 770]
+    Location		    [129, 59, 769, 829]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1411,7 +1411,7 @@ Library {
 	  }
 	  System {
 	    Name		    "Attack Type Controller"
-	    Location		    [0, 0, 1280, 770]
+	    Location		    [129, 59, 769, 829]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1459,7 +1459,7 @@ Library {
 	      }
 	      System {
 		Name			"interval forward controller"
-		Location		[-8, 0, 1288, 786]
+		Location		[129, 59, 769, 829]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -1496,8 +1496,8 @@ Library {
 		  Ports			  [0, 1]
 		  Position		  [105, 265, 180, 305]
 		  ZOrder		  35
-		  LibraryVersion	  "1.237"
-		  SourceBlock		  "VAlib/Impuls"
+		  LibraryVersion	  "1.118"
+		  SourceBlock		  "TElib/Impuls"
 		  SourceType		  ""
 		  ContentPreviewEnabled	  off
 		  amplitude		  "1"
@@ -1652,7 +1652,7 @@ Library {
 	      }
 	      System {
 		Name			"periodical forward controller"
-		Location		[0, 0, 628, 770]
+		Location		[129, 59, 769, 829]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -1762,7 +1762,7 @@ Library {
 	      }
 	      System {
 		Name			"step forward controller"
-		Location		[0, 0, 628, 770]
+		Location		[0, 0, 640, 770]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -2349,7 +2349,7 @@ Library {
       }
       System {
 	Name			"Attack Controller Backup"
-	Location		[561, 61, 1184, 690]
+	Location		[129, 59, 769, 829]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -2428,7 +2428,7 @@ Library {
 	  }
 	  System {
 	    Name		    "Attack Type Controller"
-	    Location		    [-8, -8, 1288, 778]
+	    Location		    [129, 59, 769, 829]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -2476,7 +2476,7 @@ Library {
 	      }
 	      System {
 		Name			"interval forward controller"
-		Location		[0, 0, 628, 770]
+		Location		[129, 59, 769, 829]
 		Open			off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -2513,9 +2513,10 @@ Library {
 		  Ports			  [0, 1]
 		  Position		  [105, 265, 180, 305]
 		  ZOrder		  35
-		  LibraryVersion	  "1.82"
+		  LibraryVersion	  "1.118"
 		  SourceBlock		  "TElib/Impuls"
 		  SourceType		  ""
+		  ContentPreviewEnabled	  off
 		  amplitude		  "1"
 		  duration		  "duration"
 		  delay			  "start"
@@ -3119,7 +3120,7 @@ Library {
       }
       System {
 	Name			"Discrete PI"
-	Location		[0, 0, 724, 770]
+	Location		[0, 0, 640, 770]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -3223,7 +3224,7 @@ Library {
 	  }
 	  System {
 	    Name		    "Vel PI"
-	    Location		    [16, 140, 682, 678]
+	    Location		    [0, 0, 640, 770]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -3719,7 +3720,7 @@ Library {
       Ports		      [2, 1]
       Position		      [80, 154, 160, 216]
       ZOrder		      -2
-      LibraryVersion	      "1.117"
+      LibraryVersion	      "1.118"
       SourceBlock	      "TElib/Discrete PI/Vel PI"
       SourceType	      ""
       ContentPreviewEnabled   off
