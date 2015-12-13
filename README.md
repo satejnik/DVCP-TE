@@ -3,7 +3,7 @@
 DVCP-TE
 =======
 
-This is an early release for test purposes. Provided functionality and licensing are tentative and subject to change without notice.
+For Damn Vulnerable Chemical Process framework description, please refer to Chapter 8 in the white paper “Rocking the pocket book: Hacking chemical plants for competition and extortion”.
 
 ## How to use it
 

@@ -16,6 +16,8 @@ function window = configui
     % import classes
     NET.addAssembly([pwd '\bin\configui.exe']);
     window = configui.MainView;
+    
     addlistener(window, 'ScriptEvent', @(sender, args) eval(char(args.Script))); 
     window.Show();
+    window.Topmost = true;
 end
